@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:columnCount="4"
+    android:rowCount="5">
+
+    <Button
+        android:id="@+id/posto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/posto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/posto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/posto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/posto5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/posto6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/posto7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7" />
+
+    <Button
+        android:id="@+id/posto8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8" />
+
+    <Button
+        android:id="@+id/posto9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/posto10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10" />
+
+    <Button
+        android:id="@+id/posto11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11" />
+
+    <Button
+        android:id="@+id/posto12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12" />
+
+    <Button
+        android:id="@+id/posto13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13" />
+
+    <Button
+        android:id="@+id/posto14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14" />
+
+    <Button
+        android:id="@+id/posto15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15" />
+
+    <Button
+        android:id="@+id/posto16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16" />
+
+    <Button
+        android:id="@+id/posto17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17" />
+
+    <Button
+        android:id="@+id/posto18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18" />
+
+    <Button
+        android:id="@+id/posto19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19" />
+
+    <Button
+        android:id="@+id/posto20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20" />
+
+
+</GridLayout>
