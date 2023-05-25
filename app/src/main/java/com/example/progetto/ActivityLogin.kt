@@ -14,6 +14,8 @@ class ActivityLogin : AppCompatActivity() {
     private lateinit var binding:ActivityLoginBinding
     private lateinit var dbManager: DBManager
 
+    //ciaoap
+
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
