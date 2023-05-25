@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.progetto.Db.DBManager
 import com.example.progetto.databinding.ActivityLoginBinding
 
-
+/////ciao
 class ActivityLogin : AppCompatActivity() {
 
     private lateinit var binding:ActivityLoginBinding
