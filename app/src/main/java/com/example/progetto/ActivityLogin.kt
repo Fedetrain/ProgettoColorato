@@ -3,19 +3,24 @@ package com.example.progetto
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import java.util.*
+import javax.mail.*
+import javax.mail.internet.InternetAddress
+import javax.mail.internet.MimeMessage
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.progetto.Db.DBManager
 import com.example.progetto.databinding.ActivityLoginBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-/////ciao
 class ActivityLogin : AppCompatActivity() {
 
     private lateinit var binding:ActivityLoginBinding
     private lateinit var dbManager: DBManager
 
-    //ciaoapoo
-    //CCCCCccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,10 +31,11 @@ class ActivityLogin : AppCompatActivity() {
         dbManager = DBManager(this)
         dbManager.open()
         binding.buttonLogin.setOnClickListener {
-            val email = binding.editTextEmail.text.toString()
-            val password = binding.editTextPassword.text.toString()
+           // val email = binding.editTextEmail.text.toString()
+            //val password = binding.editTextPassword.text.toString()
+            //login(email, password)
             val intent = Intent(this, ActivityPrincipale::class.java)
-            login(email, password)
+            startActivity(intent)
 
 
 
@@ -39,6 +45,8 @@ class ActivityLogin : AppCompatActivity() {
             startActivity(intent)
 
 
+        }
+        binding.textPasswordDimenticata.setOnClickListener {
         }
     }
     private fun login(email: String, password: String) {
@@ -55,6 +63,9 @@ class ActivityLogin : AppCompatActivity() {
             Toast.makeText(this, "Non sei registrato. Registrati prima di accedere.", Toast.LENGTH_LONG).show()
         }
     }
+
+
+
 
 
     override fun onDestroy() {

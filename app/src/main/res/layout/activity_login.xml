@@ -18,9 +18,10 @@
         android:id="@+id/edit_text_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/edit_text_password"
@@ -46,5 +47,11 @@
         android:layout_gravity="center_horizontal"
         android:text="Registrati"
         android:textColor="@color/design_default_color_primary" />
+
+    <TextView
+        android:id="@+id/textPasswordDimenticata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="passwor dimenticata?" />
 
 </LinearLayout>
