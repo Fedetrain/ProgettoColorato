@@ -9,18 +9,21 @@ import com.example.progetto.databinding.ActivityRegistrazioneBinding
 import java.util.regex.Pattern
 
 class ActivityRegistrazione : AppCompatActivity() {
+    companion object{
+        val PASSWORD_PATTERN = Pattern.compile(
+            "^" +
+                    "(?=.*[0-9])" +  // almeno un numero
+                    "(?=.*[a-z])" +  // almeno una lettera minuscola
+                    "(?=.*[A-Z])" +  // almeno una lettera maiuscola
+                    "(?=\\S+$)" +  // nessuno spazio bianco
+                    ".{8,}" +  // almeno 8 caratteri
+                    "$"
+        )
+
+    }
     private lateinit var binding:ActivityRegistrazioneBinding
     private lateinit var dbManager: DBManager
     // Pattern per la validazione della password
-    val PASSWORD_PATTERN = Pattern.compile(
-        "^" +
-                "(?=.*[0-9])" +  // almeno un numero
-                "(?=.*[a-z])" +  // almeno una lettera minuscola
-                "(?=.*[A-Z])" +  // almeno una lettera maiuscola
-                "(?=\\S+$)" +  // nessuno spazio bianco
-                ".{8,}" +  // almeno 8 caratteri
-                "$"
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -31,16 +34,16 @@ class ActivityRegistrazione : AppCompatActivity() {
         binding = ActivityRegistrazioneBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonRegistrazione.setOnClickListener {
-           if(controllaRegistrazione()){
-               dbManager.insertutente(binding.editTextNome.text.toString(),
-                   binding.editTextCognome.text.toString(),
-                   binding.editTextEmail.text.toString(),
-                   binding.editTextPassword.text.toString(),
-                   binding.editTextResidenza.text.toString(),"-")
-               val intent = Intent(this, ActivityPrincipale::class.java)
-               startActivity(intent)
+            if(controllaRegistrazione()){
+                dbManager.insertutente(binding.editTextNome.text.toString(),
+                    binding.editTextCognome.text.toString(),
+                    binding.editTextEmail.text.toString(),
+                    binding.editTextPassword.text.toString(),
+                    binding.editTextResidenza.text.toString(),"-")
+                val intent = Intent(this, ActivityPrincipale::class.java)
+                startActivity(intent)
 
-           }
+            }
 
 
         }

@@ -38,8 +38,8 @@ class CountryDbHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, nul
         private const val SQL_CREATE_UTENTI =
             "CREATE TABLE $TABLE_UTENTI (" +
                     "$_ID LONG PRIMARY KEY," +
-                    "$EMAIL STRING NOT NULL," +
-                    "$PASSWORD STRING NOT NULL," +
+                    "$EMAIL TEXT NOT NULL," +
+                    "$PASSWORD TEXT NOT NULL," +
                     "$NOME TEXT NOT NULL," +
                     "$COGNOME TEXT NOT NULL," +
                     "$INDIRIZZ0 TEXT NOT NULL," +
@@ -49,8 +49,8 @@ class CountryDbHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, nul
         private const val SQL_CREATE_CINEMA =
             "CREATE TABLE $TABLE_CINEMA (" +
                     "$_ID_FILM LONG PRIMARY KEY," +
-                    "$NOME_FILM STRING NOT NULL," +
-                    "$SALA_FILM STRING NOT NULL," +
+                    "$NOME_FILM TEXT NOT NULL," +
+                    "$SALA_FILM TEXT NOT NULL," +
                     "$ORA_INIZIO DATE NOT NULL," +
                     "$DURATA TEXT NOT NULL);"
 

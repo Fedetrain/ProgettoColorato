@@ -1,0 +1,16 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Primary colors -->
+        <item name="colorPrimary">#0CAAF6</item>
+        <item name="colorPrimaryVariant">#0BC7D4</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">#01EAB7</item>
+        <item name="colorSecondaryVariant">#0BD46F</item>
+
+        <!-- Accent color -->
+        <item name="colorAccent">#0CF63F</item>
+        <item name="android:windowBackground">@drawable/backgroud_color</item>
+    </style>
+</resources>

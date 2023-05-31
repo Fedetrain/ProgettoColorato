@@ -1,119 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout2"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="417dp"
+        android:layout_height="741dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/backgroud_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Benvenuto al Cinema XYZ"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="@color/design_default_color_primary"
-                android:padding="16dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_background"
-                    app:tint="@color/design_default_color_primary" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Via Roma, 10\nMilano (MI)"
-                    android:textSize="18sp"
-                    android:textColor="@color/design_default_color_primary"
-                    android:layout_marginStart="16dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/button_storico_prenotazioni"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/design_default_color_primary"
-                    android:padding="16dp"
-                    android:text="Visualizza lo storico delle prenotazioni"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/button_prenotazione"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/design_default_color_primary"
-                    android:padding="16dp"
-                    android:text="Effettua una prenotazione"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/button_profilo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/design_default_color_primary"
-                    android:padding="16dp"
-                    android:text="Visualizza il tuo profilo"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/button_film_in_sala"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/design_default_color_primary"
-                    android:padding="16dp"
-                    android:text="Film in sala"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/button_promozioni"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/design_default_color_primary"
-                    android:padding="16dp"
-                    android:text="Promozioni"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp" />
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainerView"
-                    android:name="com.example.progetto.FragmentFilm"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_film" />
-            </LinearLayout>
-        </LinearLayout>
-
-    </ScrollView>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

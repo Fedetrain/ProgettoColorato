@@ -53,6 +53,7 @@ class ActivityLogin : AppCompatActivity() {
         // Controlla se l'email esiste nel sistema
         if (dbManager.controllaEsistenzaEmail(email)) {
             if (dbManager.controllaEsistenzaCredenziali(email, password)) {
+
                 val intent = Intent(this, ActivityPrincipale::class.java)
                 startActivity(intent)
             } else {
